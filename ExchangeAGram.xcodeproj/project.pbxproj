@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		4EB99E231BEB29F000EC3DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E221BEB29F000EC3DD3 /* AppDelegate.swift */; };
 		4EB99E261BEB29F000EC3DD3 /* ExchangeAGram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E241BEB29F000EC3DD3 /* ExchangeAGram.xcdatamodeld */; };
-		4EB99E281BEB29F000EC3DD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E271BEB29F000EC3DD3 /* ViewController.swift */; };
 		4EB99E2B1BEB29F000EC3DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB99E291BEB29F000EC3DD3 /* Main.storyboard */; };
 		4EB99E2D1BEB29F000EC3DD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB99E2C1BEB29F000EC3DD3 /* Images.xcassets */; };
 		4EB99E301BEB29F000EC3DD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB99E2E1BEB29F000EC3DD3 /* LaunchScreen.xib */; };
 		4EB99E3C1BEB29F100EC3DD3 /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E3B1BEB29F100EC3DD3 /* ExchangeAGramTests.swift */; };
+		4EE89FAC1BEC691A0053C62E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE89FAB1BEC691A0053C62E /* FeedViewController.swift */; };
+		4EE89FAE1BEC6B500053C62E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE89FAD1BEC6B500053C62E /* FeedCell.swift */; };
+		4EE89FB01BEC6CCD0053C62E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE89FAF1BEC6CCD0053C62E /* MobileCoreServices.framework */; };
+		4EE89FB21BEC76FE0053C62E /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE89FB11BEC76FE0053C62E /* FeedItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +34,16 @@
 		4EB99E211BEB29F000EC3DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB99E221BEB29F000EC3DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EB99E251BEB29F000EC3DD3 /* ExchangeAGram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExchangeAGram.xcdatamodel; sourceTree = "<group>"; };
-		4EB99E271BEB29F000EC3DD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EB99E2A1BEB29F000EC3DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EB99E2C1BEB29F000EC3DD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4EB99E2F1BEB29F000EC3DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4EB99E351BEB29F100EC3DD3 /* ExchangeAGramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeAGramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB99E3A1BEB29F100EC3DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB99E3B1BEB29F100EC3DD3 /* ExchangeAGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeAGramTests.swift; sourceTree = "<group>"; };
+		4EE89FAB1BEC691A0053C62E /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		4EE89FAD1BEC6B500053C62E /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		4EE89FAF1BEC6CCD0053C62E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4EE89FB11BEC76FE0053C62E /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE89FB01BEC6CCD0053C62E /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +68,7 @@
 		4EB99E141BEB29F000EC3DD3 = {
 			isa = PBXGroup;
 			children = (
+				4EE89FAF1BEC6CCD0053C62E /* MobileCoreServices.framework */,
 				4EB99E1F1BEB29F000EC3DD3 /* ExchangeAGram */,
 				4EB99E381BEB29F100EC3DD3 /* ExchangeAGramTests */,
 				4EB99E1E1BEB29F000EC3DD3 /* Products */,
@@ -80,11 +88,13 @@
 			isa = PBXGroup;
 			children = (
 				4EB99E221BEB29F000EC3DD3 /* AppDelegate.swift */,
-				4EB99E271BEB29F000EC3DD3 /* ViewController.swift */,
+				4EE89FAB1BEC691A0053C62E /* FeedViewController.swift */,
+				4EE89FAD1BEC6B500053C62E /* FeedCell.swift */,
 				4EB99E291BEB29F000EC3DD3 /* Main.storyboard */,
 				4EB99E2C1BEB29F000EC3DD3 /* Images.xcassets */,
 				4EB99E2E1BEB29F000EC3DD3 /* LaunchScreen.xib */,
 				4EB99E241BEB29F000EC3DD3 /* ExchangeAGram.xcdatamodeld */,
+				4EE89FB11BEC76FE0053C62E /* FeedItem.swift */,
 				4EB99E201BEB29F000EC3DD3 /* Supporting Files */,
 			);
 			path = ExchangeAGram;
@@ -215,8 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EB99E281BEB29F000EC3DD3 /* ViewController.swift in Sources */,
 				4EB99E231BEB29F000EC3DD3 /* AppDelegate.swift in Sources */,
+				4EE89FAE1BEC6B500053C62E /* FeedCell.swift in Sources */,
+				4EE89FAC1BEC691A0053C62E /* FeedViewController.swift in Sources */,
+				4EE89FB21BEC76FE0053C62E /* FeedItem.swift in Sources */,
 				4EB99E261BEB29F000EC3DD3 /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +423,7 @@
 				4EB99E411BEB29F100EC3DD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EB99E421BEB29F100EC3DD3 /* Build configuration list for PBXNativeTarget "ExchangeAGramTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +432,7 @@
 				4EB99E441BEB29F100EC3DD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
