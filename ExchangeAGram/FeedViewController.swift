@@ -21,12 +21,18 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
 
         // Do any additional setup after loading the view.
         
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) { // this now holds stuff from viewDidLoad() to make it refresh view once it's displayed and not only loaded once
+        
         let request = NSFetchRequest(entityName: "FeedItem")
         let appDelegate:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         let context:NSManagedObjectContext = appDelegate.managedObjectContext!
         
         feedArray = context.executeFetchRequest(request, error: nil)!
         
+        collectionView.reloadData()
         
         
     }
@@ -47,6 +53,11 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     */
     
+    @IBAction func profileTapped(sender: UIBarButtonItem) {
+        
+        self.performSegueWithIdentifier("profileSegue", sender: nil)
+        
+    }
     
     @IBAction func snapBarButtonTapped(sender: UIBarButtonItem) {
         
@@ -98,6 +109,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         let image = info[UIImagePickerControllerOriginalImage] as UIImage
         
         let imageData = UIImageJPEGRepresentation(image, 1.0)
+        let thumbNailData = UIImageJPEGRepresentation(image, 0.1)
         
         let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
         let entityDescription = NSEntityDescription.entityForName("FeedItem", inManagedObjectContext: managedObjectContext!)
@@ -106,6 +118,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         // setup item n save:
         feedItem.image = imageData
         feedItem.caption = "test caption"
+        feedItem.thumbNail = thumbNailData
         (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
         
         feedArray.append(feedItem) // to display the freshly added photo at once, not after restart
@@ -140,5 +153,21 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
     
+    // UICollectionViewDelegate
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let thisItem = feedArray[indexPath.row] as FeedItem
+        
+        var filterVC = FilterViewController()
+        filterVC.thisFeedItem = thisItem
+        
+        self.navigationController?.pushViewController(filterVC, animated: false)
+    }
+    
+    
+    
 
 }
+
+
+
